@@ -1,5 +1,5 @@
 name = str(input("Enter your name: ").capitalize())
-print(f"Welcome {name}")
+print("Welcome {}".format(name))
 age = int(input("Please enter your age number: "))
 is_member = str(input("Are you a member?(yes/no): "))
 has_invitation = str(input("Do you have an invitation?(yes/no): "))
@@ -17,13 +17,13 @@ else:
     is_member = False
 
 if is_member and age >= 18:
-    print(f"{name}, you have access to Member's Event")
+    print("Hey {}, you have access to Member's Event".format(name))
 elif has_invitation or age >= 21:
-    print(f"{name}, you have access to VIP Event")
+    print("Hey {}, you have access to VIP Event".format(name))
 elif is_member and has_invitation:
-    print(f"{name}, you have access to Exclusive Event")
+    print("Hey {}, you have access to Exclusive Event".format(name))
 else:
-    print(f"{name}, you have access to General Event")
+    print("Hey {}, you have access to General Event".format(name))
 
 # nesting conditionals
 # if age >= 18:
