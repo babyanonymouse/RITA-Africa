@@ -7,8 +7,8 @@ Use comments to explain each step.
 print("<-- AREA OF A RECTANGLE -->")  # Display a header
 
 # Prompt the user to enter the length and width of the rectangle
-rect_length = int(input("Enter the length of the Rectangle: "))  # Input length
-rect_width = int(input("Enter the width of the Rectangle: "))  # Input width
+rect_length = int(input("Enter the length of the Rectangle(metres): "))  # Input length
+rect_width = int(input("Enter the width of the Rectangle(metres): "))  # Input width
 
 
 # Function to calculate the area of a rectangle
@@ -19,4 +19,4 @@ def rectangle_area():
 
 # Calculate the area and print the result
 area = rectangle_area()  # Call the function
-print("The area of the rectangle is {}".format(area))  # Format and display the result
+print("The area of the rectangle is {} metres²".format(area))  # Format and display the result
