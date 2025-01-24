@@ -14,7 +14,7 @@ def load_users():
     except (FileNotFoundError, json.JSONDecodeError):
         print("Database file not found. Creating a new one...")
         with open("user_database.json", "w") as file:
-            json.dump({}, tfile)  # Create an empty JSON object
+            json.dump({}, file)  # Create an empty JSON object
         return {}
 
 
