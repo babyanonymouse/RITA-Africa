@@ -14,7 +14,7 @@ def load_users():
     except (FileNotFoundError, json.JSONDecodeError):
         print("Database file not found. Creating a new one...")
         with open("user_database.json", "w") as file:
-            json.dump({}, file)  # Create an empty JSON object
+            json.dump({}, tfile)  # Create an empty JSON object
         return {}
 
 
@@ -52,18 +52,23 @@ def register_user():
     save_users()
     print("Registration Successful!")
 
+# Function to login user
+def login_user():
+
 
 # Main Program Loop
 while True:
     print("\n --- TaskFlow ---")
-    time.sleep(1)
+    time.sleep(1)  # delay timer
     print("Your Tasks, Your Flow, Your Success.")
     time.sleep(0.5)
     action = input("Choose an action (register/exit): ").strip().lower()
     if action == "register":
         register_user()
     elif action == "exit":
-        print("Exiting the system ... \n Bye")
-        break
+        print("Exiting the system ...")
+        time.sleep(1)
+        print("Bye")
+        exit()
     else:
         print("Invalid action! Please choose 'register' or 'exit'")
